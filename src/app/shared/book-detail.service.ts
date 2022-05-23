@@ -9,7 +9,7 @@ export class BookDetailService {
 
   constructor(private http:HttpClient) { }
 
-  readonly baseURL = 'https://localhost:7143/api/Libro'
+  readonly baseURL = 'https://nacionallibrary.herokuapp.com/api/Libro'
   formData:BookDetail = new BookDetail();
   list: BookDetail[];
 

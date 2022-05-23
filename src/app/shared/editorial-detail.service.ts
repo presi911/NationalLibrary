@@ -9,7 +9,7 @@ export class EditorialDetailService {
 
   constructor(private http:HttpClient) { }
 
-  readonly baseURL = 'https://localhost:7143/api/Editorial'
+  readonly baseURL = 'https://nacionallibrary.herokuapp.com/api/Editorial'
   formData:EditorialDetail = new EditorialDetail();
   list: EditorialDetail[];
 
