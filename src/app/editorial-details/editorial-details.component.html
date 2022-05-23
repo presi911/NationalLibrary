@@ -1,0 +1,28 @@
+<div class="jumbotron py-3">
+    <h1 class="display-4 text-center">Editoriales</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6"><app-editorial-detail-form></app-editorial-detail-form></div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Editorial Id</th>
+                        <th>Nombre</th>
+                        <th>Sede</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ps of service.list">
+                        <td (click)="populateForm(ps)">{{ps.id}}</td>
+                        <td (click)="populateForm(ps)">{{ps.nombre}}</td>
+                        <td (click)="populateForm(ps)">{{ps.sede}}</td>
+                        <td>
+                            <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(ps.id)"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

@@ -1,0 +1,31 @@
+<form novalidate  #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="id" [value]="service.formData.id" />
+    <div class="form-group">
+        <label>Editorial Id</label>
+        <input class="form-control form-control-lg" placeholder="editoriales_Id" 
+        name="editoriales_Id" #editoriales_Id="ngModel" [(ngModel)]="service.formData.editoriales_Id"
+        required [class.invalid]="editoriales_Id.invalid && editoriales_Id.touched">
+        
+    </div>
+    <div class="form-group">
+        <label>Titulo</label>
+        <input class="form-control form-control-lg" placeholder="titulo" 
+        name="titulo" #titulo="ngModel" [(ngModel)]="service.formData.titulo"
+        required [class.invalid]="titulo.invalid && titulo.touched">
+    </div>
+    <div class="form-group">
+        <label>Sinopsis</label>
+        <input class="form-control form-control-lg" placeholder="sinopsis" 
+        name="sinopsis" #sinopsis="ngModel" [(ngModel)]="service.formData.sinopsis"
+        required [class.invalid]="sinopsis.invalid && sinopsis.touched">
+    </div>
+    <div class="form-group">
+        <label>Numero de Paginas</label>
+        <input class="form-control form-control-lg" placeholder="n_paginas" 
+        name="n_paginas" #n_paginas="ngModel" [(ngModel)]="service.formData.n_paginas"
+        required [class.invalid]="n_paginas.invalid && n_paginas.touched">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
+    </div>
+</form>
